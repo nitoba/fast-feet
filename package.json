@@ -1,0 +1,18 @@
+{
+  "name": "fast-feet",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test:watch": "vitest",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
+    "@types/bun": "latest",
+    "vitest": "^1.2.2",
+    "eslint-plugin-simple-import-sort": "^10.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
