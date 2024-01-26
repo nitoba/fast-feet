@@ -2,7 +2,7 @@ import { AggregateRoot } from '../entities/aggregate-root'
 import { UniqueEntityID } from '../entities/unique-entity-id'
 import type { DomainEvent } from './domain-event'
 
-type DomainEventCallback = (event: any) => void
+type DomainEventCallback = (event: unknown) => void
 
 export class DomainEvents {
   private static handlersMap: Record<string, DomainEventCallback[]> = {}
@@ -66,7 +66,7 @@ export class DomainEvents {
   }
 
   private static dispatch(event: DomainEvent) {
-    const eventClassName: string = event.constructor.name
+    const eventClassName = event.constructor.name
 
     const isEventRegistered = eventClassName in this.handlersMap
 

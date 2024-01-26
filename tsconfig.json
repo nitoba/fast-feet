@@ -19,6 +19,7 @@
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
 
+    "baseUrl": "./" /* Specify the base directory to resolve non-relative module names. */,
     "paths": {
       "@/*": ["./src/*"],
     },
