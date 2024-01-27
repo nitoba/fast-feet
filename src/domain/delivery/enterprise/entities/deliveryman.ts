@@ -4,7 +4,7 @@ import type { Optional } from '@/core/types/optional'
 
 import { CPF } from '../value-objects/cpf'
 
-interface DeliveryManProps {
+export interface DeliveryManProps {
   name: string
   cpf: CPF
   password: string

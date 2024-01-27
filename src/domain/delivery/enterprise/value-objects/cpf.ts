@@ -3,6 +3,8 @@ import { ValueObject } from '@/core/value-objects'
 
 import { InvalidCPFError } from '../errors/invalid-cpf'
 
+const regexToValidateCPF = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/
+
 interface CPFProps {
   value: string
 }
@@ -16,7 +18,7 @@ export class CPF extends ValueObject<CPFProps> {
   }
 
   static create(value: string): Either<InvalidCPFError, CPF> {
-    if (value.length !== 11) {
+    if (value.length !== 14 || !regexToValidateCPF.test(value)) {
       return left(new InvalidCPFError('Invalid CPF!'))
     }
 
