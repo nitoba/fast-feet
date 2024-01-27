@@ -7,6 +7,7 @@ import { CPF } from '../value-objects/cpf'
 interface DeliveryManProps {
   name: string
   cpf: CPF
+  password: string
   createdAt: Date
   updatedAt?: Date
 }
